@@ -4,7 +4,7 @@ const getGitRouter = require("./routes/getGit.routes");
 const corsMiddleware = require("./middleware/cors.middleware");
 
 const app = express();
-const PORT = config.get("serverPort");
+const PORT = process.env.PORT;
 
 app.use(corsMiddleware);
 app.use(express.json());
